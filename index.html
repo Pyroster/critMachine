@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Crit Machine</title>
+	    <link href="critMachine.css" rel="stylesheet" type="text/css">
+  </head>
+  <body>
+  
+  
+  <!--- critmachine --->
+<div class="critmachine" id="critmachine">
+
+  <!--- screen --->
+
+  <div class="sscreen">
+
+    <span id="info"></span>
+    
+    <span class="selscreen" id="out">Opción Seleccionada</span>
+
+    
+  </div>
+
+  <!--- crit/pif selector --->
+  <div class="sselector">
+
+    <div class="led1">Críticos</div>
+    <label class="cpswitch">
+      <input type="checkbox" class="critpif" id="critpif" onclick="critpif()">
+      <div class="cpslider"></div>
+    </label>
+    <div class="led2">Pifias</div>
+
+  </div>
+  <!--- crit severity selector --->
+  <div class="crit-selec" id="crit-selec">
+
+    <div class="sselector">
+      <div class="led1">Leve</div>
+      <label class="cpswitch">
+        <input type="checkbox" class="critpif" id="crit-sev" onchange="LearnFunction()">
+        <div class="cpslider"></div>
+      </label>
+      <div class="led2">Grave</div>
+
+    </div>
+    <!-- crit type selector -->
+    <div class="crit-type">
+
+      <div class="critint">
+        <div class="interrup">
+          <div class="led"></div>
+          <label class="cont">
+            <input type="radio" class="cronoff" name="cronoff" id="filoleve">
+            <span class="chk-mrk">Filo</span>
+          </label>
+        </div>
+      </div>
+
+      <div class="critint">
+        <div class="interrup">
+          <div class="led"></div>
+          <label class="cont">
+            <input type="radio" class="cronoff" name="cronoff" id="impaleve">
+            <span class="chk-mrk">Impacto</span>
+          </label>
+        </div>
+      </div>
+
+      <div class="critint">
+        <div class="interrup">
+          <div class="led"></div>
+          <label class="cont">
+            <input type="radio" class="cronoff" name="cronoff" id="penleve">
+            <span class="chk-mrk">Penetración</span>
+          </label>
+        </div>
+      </div>
+
+      <div class="critint">
+        <div class="interrup">
+          <div class="led"></div>
+          <label class="cont">
+            <input type="radio" class="cronoff" name="cronoff" id="caleleve">
+            <span class="chk-mrk">Calor/Elect</span>
+          </label>
+        </div>
+      </div>
+
+      <div class="critint">
+        <div class="interrup">
+          <div class="led"></div>
+          <label class="cont">
+            <input type="radio" class="cronoff" name="cronoff" id="frioleve">
+            <span class="chk-mrk">Frío</span>
+          </label>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+  <!--- pifs --->
+
+  <div class="pifia" id="pifia">
+
+    <form class="pifias">
+    <div class="pif-row">
+      <div class="led3">Combate </div>
+
+      <label class="pif-hdr">CaCuerpo
+        <input type="radio" class="ponoff" name="ponoff">
+        <span class="pchk-mrk"></span>
+      </label>
+
+      <label class="pif-hdr">Proyectiles
+        <input type="radio" class="ponoff" name="ponoff">
+        <span class="pchk-mrk"></span>
+      </label>
+
+      <label class="pif-hdr">Arrojadizas
+        <input type="radio" class="ponoff" name="ponoff">
+        <span class="pchk-mrk"></span>
+      </label>
+
+    </div>
+    <div class="pif-row2">
+      <div class="led3">Movimientos </div>
+
+      <label class="pif-hdr">Dinámicas
+        <input type="radio" class="ponoff" name="ponoff">
+        <span class="pchk-mrk"></span>
+      </label>
+
+      <label class="pif-hdr">Estáticas
+        <input type="radio" class="ponoff" name="ponoff">
+        <span class="pchk-mrk"></span>
+      </label>
+
+    </div>
+    <div class="pif-row3">
+      <div class="led3">Habilidades </div>
+
+      <label class="pif-hdr">Comunicación
+        <input type="radio" class="ponoff" name="ponoff">
+        <span class="pchk-mrk"></span>
+      </label>
+
+      <label class="pif-hdr">Fabricación
+        <input type="radio" class="ponoff" name="ponoff">
+        <span class="pchk-mrk"></span>
+      </label>
+
+      <label class="pif-hdr">Manipulación
+        <input type="radio" class="ponoff" name="ponoff">
+        <span class="pchk-mrk"></span>
+      </label>
+
+      <label class="pif-hdr">Percepción
+        <input type="radio" class="ponoff" name="ponoff">
+        <span class="pchk-mrk"></span>
+      </label>
+
+      <label class="pif-hdr">Conocimientos
+        <input type="radio" class="ponoff" name="ponoff">
+        <span class="pchk-mrk"></span>
+      </label>
+
+      <label class="pif-hdr">Sigilo
+        <input type="radio" class="ponoff" name="ponoff">
+        <span class="pchk-mrk"></span>
+      </label>
+    </div>
+    </form>
+
+<!--- input --->
+
+<!--- dice --->
+    
+</div>
+  
+<!--- crit-tables --->
+
+<table class="myTable" id="filoCleve">
+</table>
+
+<table class="myTable" id="impaCleve">
+</table>
+  
+<table class="myTable" id="filoCgrave">
+</table>  
+
+<!--- input --->
+  <div>
+  <input id="inpnumb" type="number" min="1" max="20" required>
+    <span class="validity"></span>
+  </div>
+  <input type="submit" id="diceroll">
+ 
+
+ <script src="critMachine.js"></script>	
+ </body>
+</html>
+
