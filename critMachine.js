@@ -19,6 +19,7 @@ if (document.querySelector('input[name="cronoff"]')) {
       var item = event.target.id;
       console.log(item);
       document.getElementById("crit-sev").checked = false;
+      document.getElementById("info").innerHTML = "";
       switch (item) {
         case "filoleve":
           document.getElementById("out").innerHTML = "Filo Leve";
@@ -42,6 +43,7 @@ if (document.querySelector('input[name="cronoff"]')) {
 function LearnFunction() {
   var sev = document.getElementById("crit-sev");
   var string = document.getElementById("out").innerHTML;
+  document.getElementById("info").innerHTML = "";
   if (sev.checked != true) {
         let result = string.replace(/Grave/g, "Leve");
     document.getElementById("out").innerHTML = result;
