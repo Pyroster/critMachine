@@ -4,11 +4,12 @@
     <meta charset="utf-8">
 	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
 	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculadora Leyendas</title>
+    <title>The Crit Machine</title>
 	    <link href="critMachine.css" rel="stylesheet" type="text/css">
   </head>
   <body>
 
+<!--- critmachine --->
 <!--- critmachine --->
 <div class="critmachine" id="critmachine">
 
@@ -17,6 +18,12 @@
   <div class="sscreen">
 
     <span id="info"></span>
+
+    <!--- input --->
+    <div>
+      <input id="inpnumb" type="number" min="1" max="25" required>
+      <input type="submit" id="diceroll">
+    </div>
 
     <span class="selscreen" id="out">Opción Seleccionada</span>
 
@@ -201,27 +208,20 @@
   </table>
 
   <table class="myTable" id="peneCgrave">
-  </table> 
-    
- <table class="myTable" id="caleCgrave">
   </table>
-  
-  <table class="myTable" id="frioCgrave">
-</table>
-  
-  <!--- pif-tables --->
-  
-  <table class="myTable" id="cacPif">
-</table>
 
- 
-  <!--- input --->
-  <div>
-    <input id="inpnumb" type="number" min="1" max="25" required>
-    <span class="validity"></span>
-  </div>
-  <input type="submit" id="diceroll">
-  
+  <table class="myTable" id="caleCgrave">
+  </table>
+
+  <table class="myTable" id="frioCgrave">
+  </table>
+
+  <!--- pif-tables --->
+
+  <table class="myTable" id="cacPif">
+  </table>
+</div>
+   
      <script src="critMachine.js"></script>	
  </body>
 </html>
