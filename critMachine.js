@@ -40,6 +40,7 @@ if (document.querySelector('input[name="cronoff"]')) {
     });
   });
 }
+
 function LearnFunction() {
   var sev = document.getElementById("crit-sev");
   var string = document.getElementById("out").innerHTML;
@@ -51,6 +52,54 @@ function LearnFunction() {
     let result = string.replace(/Leve/g, "Grave");
     document.getElementById("out").innerHTML = result;
   }
+}
+
+/*pifias*/
+if (document.querySelector('input[name="ponoff"]')) {
+  document.querySelectorAll('input[name="ponoff"]').forEach((elem) => {
+    elem.addEventListener("change", function (event) {
+      var item = event.target.id;
+      console.log(item);
+      document.getElementById("info").innerHTML = "";
+      switch (item) {
+        case "cacpifia":
+          document.getElementById("out").innerHTML = "Pifia de Cuerpo a Cuerpo";
+          break;
+        case "proypifia":
+          document.getElementById("out").innerHTML = "Pifia de Proyectiles";
+          break;
+        case "arropifia":
+          document.getElementById("out").innerHTML = "Pifia de Arrojadizas";
+          break;
+        case "movpifia":
+          document.getElementById("out").innerHTML = "Pifia de Movimientos";
+          break;
+        case "estapifia":
+          document.getElementById("out").innerHTML =
+            "Pifia de Maniobras Estáticas";
+          break;
+        case "comupifia":
+          document.getElementById("out").innerHTML = "Pifia de Comunicación";
+          break;
+        case "fabrpifia":
+          document.getElementById("out").innerHTML =
+            "Pifia de Fabricación/Creación";
+          break;
+        case "manipifia":
+          document.getElementById("out").innerHTML = "Pifia de Manipulación";
+          break;
+        case "perpifia":
+          document.getElementById("out").innerHTML = "Pifia de Percepción";
+          break;
+        case "conpifia":
+          document.getElementById("out").innerHTML = "Pifia de Conocimientos";
+          break;
+        case "sigpifia":
+          document.getElementById("out").innerHTML = "Pifia de Sigilo";
+          break;
+      }
+    });
+  });
 }
 
 /*dice roll*/
@@ -76,6 +125,8 @@ document.getElementById("diceroll").onclick = function () {
     caleCgrave();
   } else if (cr === "Frío Grave") {
     frioCgrave();
+  } else if (cr === "Pifia de Cuerpo a Cuerpo") {
+    cacPif();
   }
 };
 
@@ -1327,6 +1378,130 @@ function frioCgrave() {
 
   // GET THE CELLS COLLECTION OF THE CURRENT ROW.
   var objCells = friogravetab.rows.item(i).cells;
+
+  // LOOP THROUGH EACH CELL OF THE CURENT ROW TO READ CELL VALUES.
+  for (var j = 1; j < objCells.length; j++) {
+    info.innerHTML = info.innerHTML + " " + objCells.item(j).innerHTML;
+  }
+  info.innerHTML = info.innerHTML + "<br />"; // ADD A BREAK (TAG).
+}
+
+/*cacpif*/
+let cacpifia = [
+  { Resultado: 1, Descripcion: "Haces un mal movimiento y no puedes atacar." },
+  { Resultado: 2, Descripcion: "Haces un mal movimiento y no puedes atacar." },
+  { Resultado: 3, Descripcion: "Haces un mal movimiento y no puedes atacar." },
+  {
+    Resultado: 4,
+    Descripcion: "El arma se te escurre de las manos y cae al suelo."
+  },
+  {
+    Resultado: 5,
+    Descripcion: "El arma se te escurre de las manos y cae al suelo."
+  },
+  {
+    Resultado: 6,
+    Descripcion: "Tropiezas y pierdes el asalto intentando no caer."
+  },
+  {
+    Resultado: 7,
+    Descripcion: "Tropiezas y pierdes el asalto intentando no caer."
+  },
+  {
+    Resultado: 8,
+    Descripcion: "El arma se te escurre de las manos y cae a 1D6m de ti."
+  },
+  { Resultado: 9, Descripcion: "Tropiezas y te aturdes 1 asalto." },
+  {
+    Resultado: 10,
+    Descripcion: "El arma se te escurre de las manos y cae a 2D6m de ti."
+  },
+  {
+    Resultado: 11,
+    Descripcion:
+      "Tropiezas y caes al suelo perdiendo el arma, aturdiendo 1 asalto"
+  },
+  {
+    Resultado: 12,
+    Descripcion:
+      "Haces un mal gesto y te esquinzas el hombro izquierdo. Aturdido 1 asalto y usas el brazo a -10 hasta que el hombro sea curado. (Tendón herida leve)"
+  },
+  {
+    Resultado: 13,
+    Descripcion:
+      "Haces un mal gesto y te esquinzas el codo derecho. Aturdido 1 asalto y usas el brazo a -10 hasta que el hombro sea curado.(Tendón herida leve)"
+  },
+  {
+    Resultado: 14,
+    Descripcion:
+      "Haces un mal gesto y te tuerces el pie. Aturdido 1 asalto y estás a -15 hasta que la torcedura se cure. (Tendón herida leve)"
+  },
+  {
+    Resultado: 15,
+    Descripcion:
+      "Haces un mal gesto y pinzas los lumbares. Aturdido 2 asaltos y estás a -15 hasta que la espalda sea curada (Tendón herida leve)"
+  },
+  {
+    Resultado: 16,
+    Descripcion:
+      "Haces un movimiento extraño y te golpeas con tu arma aturdiendo 2d4 asaltos"
+  },
+  {
+    Resultado: 17,
+    Descripcion:
+      "El arma se te escurre de las manos y salga disparada a 2d4 metros, aturdiendo 1d4 asaltos"
+  },
+  {
+    Resultado: 18,
+    Descripcion:
+      "Haces un movimiento extraño y golpeas con el arma el suelo, aturdiendo 1d4 asaltos. Tira Armadura del arma x 8 o se rompe."
+  },
+  {
+    Resultado: 19,
+    Descripcion:
+      "Das un mal golpe y tu arma tira Armadura x 6 para no partirse. Aturdido por el golpe 1d4 asaltos."
+  },
+  {
+    Resultado: 20,
+    Descripcion:
+      "Das un golpe brusco y tu arma tira Armadura x 3 para no partirse. Aturdido por el golpe 1d4 asaltos."
+  }
+];
+
+function generatecacpiftableHead(cacpiftable, cacpifdata) {
+  let cacpifthead = cacpiftable.createTHead();
+  let row = cacpifthead.insertRow();
+  for (let key of cacpifdata) {
+    let th = document.createElement("th");
+    let text = document.createTextNode(key);
+    th.appendChild(text);
+    row.appendChild(th);
+  }
+}
+
+let cacpiftable = document.getElementById("cacPif");
+let cacpifdata = Object.keys(cacpifia[0]);
+generatecacpiftable(cacpiftable, cacpifia);
+generatecacpiftableHead(cacpiftable, cacpifdata);
+
+function generatecacpiftable(cacpiftable, cacpifdata) {
+  for (let element of cacpifdata) {
+    let row = cacpiftable.insertRow();
+    for (key in element) {
+      let cell = row.insertCell();
+      let text = document.createTextNode(element[key]);
+      cell.appendChild(text);
+    }
+  }
+}
+function cacPif() {
+  document.getElementById("info").innerHTML = "";
+  var cacpifTab = document.getElementById("cacPif");
+  var i = document.getElementById("inpnumb").value;
+  // LOOP THROUGH EACH ROW OF THE TABLE AFTER HEADER.
+
+  // GET THE CELLS COLLECTION OF THE CURRENT ROW.
+  var objCells = cacpifTab.rows.item(i).cells;
 
   // LOOP THROUGH EACH CELL OF THE CURENT ROW TO READ CELL VALUES.
   for (var j = 1; j < objCells.length; j++) {
