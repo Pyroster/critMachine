@@ -4,9 +4,11 @@ function critpif() {
   var y = document.getElementById("pifia");
 
   if (x.style.display === "none") {
+    document.querySelector('input[name="cronoff"]').checked = false;
     x.style.display = "block";
     y.style.display = "none";
-  } else {
+      } else {
+        document.querySelector('input[name="ponoff"]').checked = false;
     x.style.display = "none";
     y.style.display = "block";
   }
