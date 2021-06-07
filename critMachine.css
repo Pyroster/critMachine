@@ -1,4 +1,14 @@
 html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
   font-size: 100%;
   font-weight: 300;
  align-items: center;
