@@ -15,7 +15,7 @@ html {
   display: flex;
   height: 100vh;
   justify-content: center;
-  align-items: center stretch;
+  align-items: center;
 }
 
 /* Chrome, Safari, Edge, Opera */
