@@ -1,13 +1,4 @@
-html {
-  box-sizing: border-box;
-}
-
-*,
-*::before,
-*::after {
-  box-sizing: inherit;
-}
-
+  
 html {
   font-size: 100%;
   font-weight: 300;
@@ -15,8 +6,8 @@ html {
   display: flex;
   height: 100vh;
   justify-content: center;
-  align-items: center;
 }
+
 
 /* Chrome, Safari, Edge, Opera */
 input::-webkit-outer-spin-button,
