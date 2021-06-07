@@ -28,7 +28,7 @@
   </div>
 
   <!--- crit/pif selector --->
-  <div class="sselector">
+  <div class="sselector" id="critpifsel">
 
     <div class="led1">Críticos</div>
     <label class="cpswitch">
@@ -40,14 +40,14 @@
   </div>
   <!--- crit severity selector --->
   <div class="crit-selec" id="crit-selec">
-
+    <div class="led4">Críticos</div>
     <div class="sselector">
-      <div class="led1">Leve</div>
+      <div class="led">Leve</div>
       <label class="cpswitch">
         <input type="checkbox" class="critpif" id="crit-sev" onchange="LearnFunction()">
         <div class="cpslider"></div>
       </label>
-      <div class="led2">Grave</div>
+      <div class="led">Grave</div>
 
     </div>
     <!-- crit type selector -->
@@ -65,7 +65,6 @@
 
       <div class="critint">
         <div class="interrup">
-          <div class="led"></div>
           <label class="cont">
             <input type="radio" class="cronoff" name="cronoff" id="impaleve">
             <span class="chk-mrk">Impacto</span>
@@ -75,8 +74,7 @@
 
       <div class="critint">
         <div class="interrup">
-          <div class="led"></div>
-          <label class="cont">
+                 <label class="cont">
             <input type="radio" class="cronoff" name="cronoff" id="penleve">
             <span class="chk-mrk">Penetración</span>
           </label>
@@ -85,7 +83,6 @@
 
       <div class="critint">
         <div class="interrup">
-          <div class="led"></div>
           <label class="cont">
             <input type="radio" class="cronoff" name="cronoff" id="caleleve">
             <span class="chk-mrk">Calor/Elect</span>
@@ -95,7 +92,6 @@
 
       <div class="critint">
         <div class="interrup">
-          <div class="led"></div>
           <label class="cont">
             <input type="radio" class="cronoff" name="cronoff" id="frioleve">
             <span class="chk-mrk">Frío</span>
@@ -110,6 +106,8 @@
   <!--- pifs --->
 
   <div class="pifia" id="pifia">
+    
+    <div class="led4">Pifias</div>
 
     <form class="pifias">
       <div class="pif-row">
@@ -218,8 +216,40 @@
 
   <table class="myTable" id="cacPif">
   </table>
-</div>
   
+  <table class="myTable" id="proypif">
+</table>
+  
+  <table class="myTable" id="arropif">
+</table>
+  
+  <table class="myTable" id="movpif">
+</table>
+  
+  <table class="myTable" id="estatpif">
+</table>
+  
+  <table class="myTable" id="comupif">
+</table>
+  
+  <table class="myTable" id="perpif">
+</table>
+  
+  <table class="myTable" id="fabrpif">
+</table>
+  
+  <table class="myTable" id="manippif">
+</table>
+  
+  <table class="myTable" id="conopif">
+</table>
+  
+  <table class="myTable" id="sigipif">
+</table>
+  
+  
+</div>
+   
          <script src="critMachine.js"></script>	
  </body>
 </html>
