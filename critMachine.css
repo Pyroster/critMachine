@@ -5,14 +5,26 @@ input::-webkit-inner-spin-button {
   margin: 0;
 }
 
+html {
+  display: flex;
+    justify-content: center;
+  align-items: center;
+}
+
+*,*:before,*:after {
+  box-sizing:inherit;
+}
 .critmachine {
   display: inline-grid;
+    padding: 2%;
+ padding-bottom: 4%;
+    gap: 0.5%;
+    width: 420px;
+  max-height: 100%;
     box-shadow: 0px 1px 3px 1px rgb(254, 200, 0, 0.8);
   background-image: linear-gradient(black, orange, rgb(254, 200, 0, 0.8), white);
 border: 5px double black;
-    border-radius: 10px;
-  padding: 3px;
-  gap: 5px;
+    border-radius: 2%;
 }
 /*screen*/
 
@@ -21,7 +33,6 @@ border: 5px double black;
   position: relative;
     font-weight: 700;
     background-color: #252525;
-  width: 422px;
   border-radius: 10px;
   box-shadow: 0px -2px 3px 1px rgb(254, 200, 0, 0.8);
 }
@@ -37,13 +48,11 @@ border: 5px double black;
   color: rgb(254, 200, 0, 0.8);
     font-weight: 700;
     background-color: #252525;
-  width: 412px;
 }
 
 #info {
     display: block;
-  width: 412px;
-  height: 250px;
+   height: 250px;
   padding: 5px;
   font-size: 1.3em;
   text-align: center;
@@ -52,13 +61,12 @@ border: 5px double black;
  color: #fff;
     font-weight: 700;
     background-color: #252525;
-  width: 412px;
 }
 
 #diceroll {
    display: block;
   position: relative;
-  left: 170px;
+  left: 40%;
   top: -12px;
     font-size: 1.2em;
    text-align: center;
@@ -83,10 +91,11 @@ border: 5px double black;
     display: block;
   position: relative;
   top: -20px;
-  left: 158px;
-    width: 2em;
+  left: 40%;
+    text-align: center;
+    width: 1.5em;
   font-size: 3em;
-   text-align: center;
+   align-items: center;
    color: #fff;
     font-weight: 700;
     background-color: #252525;
@@ -213,9 +222,9 @@ border: 5px double black;
 }
 .crit-selec {
   font-size: 1.2em;
-  height: 260px;
+  height: 250px;
     width: 412px;
-  padding: 5px;
+  padding: 1%;
  border-radius: 2%;
   border: 1px solid black;
   box-shadow: 0px 2px 2px 1px black;
@@ -224,9 +233,9 @@ border: 5px double black;
 .pifia {
   display: none;
   font-size: 1em;
-  height: 260px;
+  height: 250px;
   width: 412px;
-  padding: 5px;
+  padding: 1%;
   background-image: linear-gradient(black, brown,white);
  border-radius: 2%;
   border: 1px solid black;
@@ -238,7 +247,7 @@ border: 5px double black;
   cursor: pointer;
   display: block;
   position: relative;
-  font-size: 1.3em;
+  font-size: 1.2em;
     box-shadow: 0px 0px 5px 1px black;
     border: 2px groove black;
     -webkit-user-select: none;
@@ -317,7 +326,8 @@ border: 5px double black;
     display: inline-grid;
   grid-template-columns: repeat(2, auto);
   grid-template-rows: auto;
-  gap: 7px;
+  gap: 2%;
+  padding: 1%:
 }
 .pif-hdr {
   cursor: pointer;
