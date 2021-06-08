@@ -5,12 +5,6 @@ input::-webkit-inner-spin-button {
   margin: 0;
 }
 
-html {
-  display: flex;
-    justify-content: center;
-  align-items: center;
-}
-
 *,*:before,*:after {
   box-sizing:inherit;
 }
