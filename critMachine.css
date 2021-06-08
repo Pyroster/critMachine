@@ -9,16 +9,24 @@ input::-webkit-inner-spin-button {
   box-sizing:inherit;
 }
 
+@media only screen and (max-width:800px) {
+  /* For tablets: */
+  .critmachine {
+    width: 80%;
+    padding: 0;
+  }
+}
+
 @media only screen and (max-width:500px) {
   /* For mobile phones: */
   .critmachine {
     width: 100%;
   }
 }
+
 .critmachine {
   display: flex;
     padding: 2%;
- padding-bottom: 4%;
     gap: 0.5%;
     width: 420px;
   max-height: 100%;
