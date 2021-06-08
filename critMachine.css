@@ -9,8 +9,8 @@ input::-webkit-inner-spin-button {
   box-sizing:inherit;
 }
 
-
 .critmachine {
+  display: inline-grid;
     padding: 2%;
     gap: 0.5%;
     width: 420px;
